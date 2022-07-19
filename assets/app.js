@@ -10,3 +10,10 @@ import './styles/app.scss';
 
 // start the Stimulus application
 import './bootstrap';
+
+const hamburger_menu = document.querySelector(".hamburger-menu");
+const container = document.querySelector(".container");
+
+hamburger_menu.addEventListener("click", () => {
+  container.classList.toggle("active");
+});

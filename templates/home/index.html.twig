@@ -1,15 +1,40 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Home{% endblock %}
+{% block title %}Home
+{% endblock %}
 
 {% block body %}
-    <div class="pink-stripe">
-        <h1>
-            Let's start coding&nbsp;&#129304;
-        </h1>
-    </div>
-    <div class="white-stripe">
-        <img src="{{ asset('build/images/LOGO_WILD_CODE_SCHOOL.png') }}"
-             alt="">
-    </div>
+	<div class="container">
+		<div class="navbar">
+			<div class="menu">
+				<h3 class="logo">Dan<span>Travels</span>
+				</h3>
+				<div class="hamburger-menu">
+					<div class="bar"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="main-container">
+			<div class="main">
+				<header>
+					<div class="overlay">
+						<div class="inner">
+							<h2 class="title">Mes Voyages en Europe</h2>
+							<p>
+								"N'oubliez pas que le bonheur est un moyen de voyager, pas une destination."
+							</p>
+							<button class="btn">En savoir plus sur moi</button>
+						</div>
+					</div>
+				</header>
+			</div>
+			<div class="shadow one"></div>
+			<div class="shadow two"></div>
+		</div>
+{% block header %}
+			{% include 'components/_navbar.html.twig' %}
+		{% endblock %}
+	</div>
+
 {% endblock %}
