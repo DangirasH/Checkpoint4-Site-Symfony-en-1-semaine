@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AboutController!
+{% endblock %}
+
+{% block body %}
+	<div class="container">
+		<div class="navbar">
+			<div class="menu">
+				<h3 class="logo">Dan<span>Travels</span>
+				</h3>
+				<div class="hamburger-menu">
+					<div class="bar"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="main-container">
+			<div class="main">
+				<header>
+					<div class="overlay">
+						<div>
+							<div
+								class="dan"><!--	<img src="{{ asset('build/images/dan.jpg') }}" alt="myPhoto" class="w-25 form-img d-lg-block d-none imgLeft"> -->
+							</div>
+							<div class="inner">
+								<h2 class="text-center text-secondary">
+									À propos de moi
+								</h2>
+
+
+								<div class="card-body">
+									<div class="d-flex justify-content-start w-25"></div>
+									<p class="card-text">
+										Je m'appelle Dangiras, je suis né en Lituanie, j'ai grandi en Irlande et cela fait 8 ans que je suis en France
+										<br>
+										Grâce à mes voyages à un si jeune âge, j'ai pu voyager et découvrir de nombreux endroits différents
+										<br>
+										<br>
+										Sur ce blog, je vais vous montrer quelques-uns des endroits les plus fantastiques que j'ai visités
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</header>
+			</div>
+			<div class="shadow one"></div>
+			<div class="shadow two"></div>
+			{% block header %}
+				{% include 'components/_navbar.html.twig' %}
+			{% endblock %}
+		</div>
+
+	{% endblock %}
