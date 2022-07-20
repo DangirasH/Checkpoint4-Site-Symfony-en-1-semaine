@@ -2,7 +2,6 @@
 
 namespace App\Controller;
 
-use App\Entity\Travel;
 use App\Repository\TravelRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;

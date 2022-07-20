@@ -1,6 +1,7 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}New Travel{% endblock %}
+{% block title %}New Travel
+{% endblock %}
 
 {% block body %}
 	<div class="container-fluid">
@@ -19,18 +20,17 @@
 				<header>
 					<div class="overlay">
 						<div>
-						<h2 class="text-center text-primary mb-5">À propos de moi</h2>
-							
+							<h2 class="text-center text-primary mb-5">À propos de moi</h2>
+
 
 							<div class="inner">
-									 <h1>Create new Travel</h1>
+								<h1>Create new Travel</h1>
+								<div class="mb-5">
+									<a href="{{ path('app_admin_travel_index') }}" class="btn btn-primary d-block mx-auto w-50">Retour à la liste</a>
+								</div>
+								{{ include('admin_travel/_form.html.twig') }}	
 
-    {{ include('admin_travel/_form.html.twig') }}
 
-    <a href="{{ path('app_admin_travel_index') }}">back to list</a>
-
-
-								
 							</div>
 						</div>
 					</div>
@@ -43,5 +43,5 @@
 			{% endblock %}
 		</div>
 
-   
-{% endblock %}
+
+	{% endblock %}
