@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+	{{ encore_entry_link_tags('voyage') }}
+{% endblock %}
+{% block title %}Hello TravelController!
+{% endblock %}
+
+{% block body %}
+	<div class="container">
+		<div class="navbar">
+			<div class="menu">
+				<h3 class="logo">Dan<span>Travels</span>
+				</h3>
+				<div class="hamburger-menu">
+					<div class="bar"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="main-container">
+			<div class="main">
+				<header>
+					<div class="overlay">
+						<div>
+							<h2 class="text-center text-primary mb-5">
+								Mes Voyages !
+							</h2>
+
+
+							<div class="inner">
+								{% include 'components/_cardvoyage.html.twig' %}
+							</div>
+
+						</div>
+					</div>
+				</header>
+			</div>
+			<div class="shadow one"></div>
+			<div class="shadow two"></div>
+			{% block header %}
+				{% include 'components/_navbar.html.twig' %}
+			{% endblock %}
+		</div>
+	{% endblock %}
