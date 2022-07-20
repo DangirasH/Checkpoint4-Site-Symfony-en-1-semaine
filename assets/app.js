@@ -13,7 +13,7 @@ require('bootstrap');
 import './bootstrap';
 
 const hamburger_menu = document.querySelector(".hamburger-menu");
-const container = document.querySelector(".container");
+const container = document.querySelector(".container-fluid");
 
 hamburger_menu.addEventListener("click", () => {
   container.classList.toggle("active");

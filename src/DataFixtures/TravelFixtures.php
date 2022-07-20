@@ -14,7 +14,21 @@ class TravelFixtures extends Fixture
             'location' => 'Cork',
             'address' => 'Cork 92233',
             'date' => "12/02/2022",
-            'image' => 'dan.jpg',
+            'image' => 'cork.jpg',
+            'country' => 'Ireland'
+        ],
+        [
+            'location' => 'Dublin',
+            'address' => 'Cork 92233',
+            'date' => "12/02/2022",
+            'image' => 'cork.jpg',
+            'country' => 'Ireland'
+        ],
+        [
+            'location' => 'Galway',
+            'address' => 'Cork 92233',
+            'date' => "12/02/2022",
+            'image' => 'cork.jpg',
             'country' => 'Ireland'
         ],
     ];

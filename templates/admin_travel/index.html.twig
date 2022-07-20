@@ -1,0 +1,75 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+	{{ encore_entry_link_tags('voyage') }}
+{% endblock %}
+{% block title %}Travel index
+{% endblock %}
+
+{% block body %}
+	<div class="container-fluid">
+		<div class="navbar">
+			<div class="menu">
+				<h3 class="logo">Dan<span>Travels</span>
+				</h3>
+				<div class="hamburger-menu">
+					<div class="bar"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="main-container-fluid">
+			<div class="main">
+				<header>
+					<div class="overlay">
+						<div>
+							<h2 class="text-center text-primary mb-5">
+								Travel List
+							</h2>
+
+							<div class="inners">
+                                <div class="mb-5">
+								<a href="{{ path('app_admin_travel_new') }}" class="btn btn-primary d-block mx-auto w-25">Create new</a>
+                                </div>
+								<table class="table">
+									<thead>
+										<tr class="text-light">
+											<th>Location</th>
+											<th>Address</th>
+											<th>Date</th>
+											<th>Image</th>
+											<th>Country</th>
+											<th>actions</th>
+										</tr>
+									</thead>
+									<tbody>
+										{% for travel in travel %}
+											<tr class="text-light">
+												<td>{{ travel.location }}</td>
+												<td>{{ travel.address }}</td>
+												<td>{{ travel.date ? travel.date|date('Y-m-d') : '' }}</td>
+												<td>{{ travel.image }}</td>
+												<td>{{ travel.country }}</td>
+												<td class="d-flex justify-content-end">
+													<a href="{{ path('app_admin_travel_edit', {'id': travel.id}) }}" class="btn btn-warning border-warning d-block mx-auto ">Modifier</a>
+													{{ include('admin_travel/_delete_form.html.twig') }}
+												</td>
+											</tr>
+										{% else %}
+											<tr>
+												<td colspan="7">no records found</td>
+											</tr>
+										{% endfor %}
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</header>
+			</div>
+			<div class="shadow one"></div>
+			<div class="shadow two"></div>
+			{% block header %}
+				{% include 'components/_navbar.html.twig' %}
+			{% endblock %}
+		</div>
+	{% endblock %}

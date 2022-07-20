@@ -9,12 +9,17 @@
   box-sizing: border-box;
 }
 
+body
+{
+  background-color: #28313b;
+}
+
 body,
 button {
   font-family: "Poppins", sans-serif;
 }
 
-.container {
+.container-fluid {
   min-height: 100vh;
   width: 100%;
   background-color: #485461;
@@ -146,20 +151,20 @@ header {
   text-decoration: none;
 }
 
-.container.active .bar {
+.container-fluid.active .bar {
   transform: rotate(360deg);
   background-color: transparent;
 }
 
-.container.active .bar:before {
+.container-fluid.active .bar:before {
   transform: translateY(0) rotate(45deg);
 }
 
-.container.active .bar:after {
+.container-fluid.active .bar:after {
   transform: translateY(0) rotate(-45deg);
 }
 
-.container.active .main {
+.container-fluid.active .main {
   animation: main-animation 0.5s ease;
   cursor: pointer;
   transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
@@ -193,7 +198,7 @@ ul {
 
 .links a {
   text-decoration: none;
-  color: rgb(190, 190, 190);
+  color: #bebebe;
   margin: 0.5rem 0;
   display: inline-block;
   font-size: 1.8rem;
@@ -226,7 +231,7 @@ a:hover::after
 {
     width: 100%;
 }
-.container.active .links a {
+.container-fluid.active .links a {
   animation: appear 0.5s forwards ease var(--i);
 }
 
@@ -266,15 +271,15 @@ a:hover::after
 
 .shadow.one {
   z-index: -1;
-  opacity: 0.15;
+  opacity: 0.05;
 }
 
 .shadow.two {
   z-index: -2;
-  opacity: 0.1;
+  opacity: 0.05;
 }
 
-.container.active .shadow.one {
+.container-fluid.active .shadow.one {
   animation: shadow-one 0.6s ease-out;
   transform: perspective(1300px) rotateY(20deg) translateZ(215px) scale(0.5);
 }
@@ -293,7 +298,7 @@ a:hover::after
   }
 }
 
-.container.active .shadow.two {
+.container-fluid.active .shadow.two {
   animation: shadow-two 0.6s ease-out;
   transform: perspective(1300px) rotateY(20deg) translateZ(120px) scale(0.5);
 }
@@ -312,10 +317,10 @@ a:hover::after
   }
 }
 
-.container.active .main:hover + .shadow.one {
+.container-fluid.active .main:hover + .shadow.one {
   transform: perspective(1300px) rotateY(20deg) translateZ(230px) scale(0.5);
 }
 
-.container.active .main:hover {
+.container-fluid.active .main:hover {
   transform: perspective(1300px) rotateY(20deg) translateZ(340px) scale(0.5);
 }
