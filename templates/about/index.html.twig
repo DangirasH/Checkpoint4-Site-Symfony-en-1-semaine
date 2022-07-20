@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello AboutController!
+{% block title %}À propos de moi
 {% endblock %}
 
 {% block body %}
@@ -20,25 +20,32 @@
 				<header>
 					<div class="overlay">
 						<div>
-							<div
-								class="dan"><!--	<img src="{{ asset('build/images/dan.jpg') }}" alt="myPhoto" class="w-25 form-img d-lg-block d-none imgLeft"> -->
-							</div>
-							<div class="inner">
-								<h2 class="text-center text-secondary">
-									À propos de moi
-								</h2>
+						<h2 class="text-center text-primary mb-5">
+										À propos de moi
+									</h2>
+							<div class="d-flex flex-row justify-content-center"><img src="{{ asset('build/images/dan.jpg') }}" alt="myPhoto" class="w-25 form-img d-lg-block d-none imgLeft">
+
+								<div class="inner">
+									
 
 
-								<div class="card-body">
-									<div class="d-flex justify-content-start w-25"></div>
-									<p class="card-text">
-										Je m'appelle Dangiras, je suis né en Lituanie, j'ai grandi en Irlande et cela fait 8 ans que je suis en France
-										<br>
-										Grâce à mes voyages à un si jeune âge, j'ai pu voyager et découvrir de nombreux endroits différents
-										<br>
-										<br>
-										Sur ce blog, je vais vous montrer quelques-uns des endroits les plus fantastiques que j'ai visités
-									</p>
+									<div class="card-body">
+										<div class="d-flex justify-content-start w-25"></div>
+										<p class="card-text text-start">
+											Je m'appelle Dangiras, je suis né en Lituanie,
+											<br>
+											 J'ai grandi en Irlande
+											<br>
+											Cela fait 8 ans que je suis en France
+											<br>
+											Grâce à mes voyages à un si jeune âge, j'ai pu voyager et découvrir de nombreux endroits différents
+											<br>
+											<br>
+											Sur ce blog, je vais vous montrer quelques-uns des endroits les plus fantastiques que j'ai visités
+											<br>
+											Je vais aussi vous recomondes des endroit a y aller!
+										</p>
+									</div>
 								</div>
 							</div>
 						</div>

@@ -1,5 +1,7 @@
 //start coding by removing this file and adding yours ;)
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+@import "variables.scss";
+@import "~bootstrap/scss/bootstrap";
 
 * {
   padding: 0;
@@ -50,7 +52,7 @@ button {
 }
 
 .logo span {
-  font-weight: 300;
+  font-weight: 50;
 }
 
 .hamburger-menu {
@@ -132,10 +134,12 @@ header {
 .btn {
   margin-top: 1rem;
   padding: 0.6rem 1.8rem;
-  background-color: #16cfcf;
-  border: none;
+  background-color: rgba(43, 51, 59, 0.8);
+  border: solid 4px;
+  border-color: $primary;
   border-radius: 25px;
-  color: rgb(0, 0, 0);
+  font-size: 1rem;
+  color: rgb(255, 255, 255);
   text-transform: uppercase;
   cursor: pointer;
   text-decoration: none;
@@ -203,7 +207,7 @@ ul {
 
 a:hover
 {
-    color: #eee;
+    color: $primary;
 }
 a::after
 {
