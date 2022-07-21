@@ -98,6 +98,11 @@ button {
   transform: translateY(9px);
 }
 
+.form-img {
+  height: 600px;
+  object-fit: cover;
+}
+
 .main {
   position: relative;
   width: 100%;
@@ -128,7 +133,7 @@ header {
 }
 
 .inner {
-  max-width: 35rem;
+  max-width: 50rem;
   text-align: center;
   color: #fff;
   padding: 0 2rem;
