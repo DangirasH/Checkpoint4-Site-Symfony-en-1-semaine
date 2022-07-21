@@ -9,6 +9,7 @@
 import './styles/app.scss';
 
 require('bootstrap');
+import('bootstrap-icons/font/bootstrap-icons.css')
 // start the Stimulus application
 import './bootstrap';
 
