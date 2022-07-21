@@ -1,10 +1,11 @@
 {% extends 'base.html.twig' %}
-
-{% block title %}New Travel
+{% block stylesheets %}
+	{{ encore_entry_link_tags('adminhome') }}
 {% endblock %}
+{% block title %}Hello AdminHomeController!{% endblock %}
 
 {% block body %}
-	<div class="container-fluid">
+<div class="container-fluid">
 		<div class="navbar">
 			<div class="menu">
 				<h3 class="logo"><a class="lorder" href="/"><img src="{{ asset('build/images/favicon.png') }}" class="rounded m-2" alt="DanTravels" width="50" height="44"></a>Dan<span>Travels</span>
@@ -20,16 +21,10 @@
 				<header>
 					<div class="overlay">
 						<div>
-							<h2 class="text-center text-primary mb-5">Creér une voyages</h2>
-
-
+						<h2 class="text-center text-primary mb-5">Acceuil Admin</h2>
 							<div class="inner">
-								<div class="mb-5">
-									<a href="{{ path('app_admin_travel_index') }}" class="btn btn-primary d-block mx-auto w-50">Retour à la liste</a>
-								</div>
-								{{ include('admin_travel/_form.html.twig') }}	
-
-
+									<a href="/admin/reco" class="btn btn-primary d-block mx-auto w-75">Recomandations</a>
+                                    <a href="/admin/travel" class="btn btn-primary d-block mx-auto w-75">Les Voyages</a>
 							</div>
 						</div>
 					</div>
@@ -42,5 +37,4 @@
 			{% endblock %}
 		</div>
 
-
-	{% endblock %}
+{% endblock %}

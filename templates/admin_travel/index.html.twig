@@ -9,7 +9,8 @@
 	<div class="container-fluid">
 		<div class="navbar">
 			<div class="menu">
-				<h3 class="logo"><a class="lorder" href="/"><img src="{{ asset('build/images/favicon.png') }}" class="rounded m-2" alt="DanTravels" width="50" height="44"></a>Dan<span>Travels</span>
+				<h3 class="logo">
+					<a class="lorder" href="/"><img src="{{ asset('build/images/favicon.png') }}" class="rounded m-2" alt="DanTravels" width="50" height="44"></a>Dan<span>Travels</span>
 				</h3>
 				<div class="hamburger-menu">
 					<div class="bar"></div>
@@ -23,13 +24,13 @@
 					<div class="overlay">
 						<div>
 							<h2 class="text-center text-primary mb-5">
-								Travel List
+								Les Voyages
 							</h2>
-
+							<a href="/admin/home" class="btn btn-primary d-block mx-auto w-25">Retour à l'Acceuil</a>
 							<div class="inners">
-                                <div class="mb-5">
-								<a href="{{ path('app_admin_travel_new') }}" class="btn btn-primary d-block mx-auto w-25">Créer un nouveau</a>
-                                </div>
+								<div class="mb-5">
+									<a href="{{ path('app_admin_travel_new') }}" class="btn btn-primary d-block mx-auto w-25">Créer un nouveau</a>
+								</div>
 								<table class="table">
 									<thead>
 										<tr class="text-light">
