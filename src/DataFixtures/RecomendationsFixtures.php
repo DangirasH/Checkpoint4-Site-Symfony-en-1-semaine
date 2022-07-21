@@ -5,9 +5,10 @@ namespace App\DataFixtures;
 use App\Entity\Recomendations;
 use DateTime;
 use Doctrine\Bundle\FixturesBundle\Fixture;
+use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 use Doctrine\Persistence\ObjectManager;
 
-class RecomendationsFixtures extends Fixture
+class RecomendationsFixtures extends Fixture implements DependentFixtureInterface
 {
     public const RECOMENDATIONS = [
         [
@@ -15,7 +16,6 @@ class RecomendationsFixtures extends Fixture
             'address' => 'Cork 92233',
             'date' => "12/02/2022",
             'image' => 'cork.jpg',
-            'country' => 'Ireland',
             'description' => 'Lorem abuda aikk Lorem abuda aikk Lorem abuda aikk'
         ],
         [
@@ -23,7 +23,6 @@ class RecomendationsFixtures extends Fixture
             'address' => 'Cork 92233',
             'date' => "12/02/2022",
             'image' => 'cork.jpg',
-            'country' => 'Ireland',
             'description' => 'Lorem abuda aikk Lorem abuda aikk Lorem abuda aikk'
         ],
         [
@@ -31,7 +30,6 @@ class RecomendationsFixtures extends Fixture
             'address' => 'Cork 92233',
             'date' => "12/02/2022",
             'image' => 'cork.jpg',
-            'country' => 'Ireland',
             'description' => 'Lorem abuda aikk Lorem abuda aikk Lorem abuda aikk'
 
         ],
@@ -45,11 +43,18 @@ class RecomendationsFixtures extends Fixture
             $recomendations->setDate(new DateTime($recomendationsItems['date']));
             $recomendations->setImage($recomendationsItems['image']);
             $recomendations->setDescription($recomendationsItems['description']);
-            $recomendations->setCountry($recomendationsItems['country']);
+            $recomendations->setTravel($this->getReference('travel_Cork'));
             $manager->persist($recomendations);
             $this->addReference('recomendations_' . $recomendationsItems['activity'], $recomendations);
         }
 
         $manager->flush();
+    }
+
+    public function getDependencies()
+    {
+        return [
+            TravelFixtures::class,
+        ];
     }
 }

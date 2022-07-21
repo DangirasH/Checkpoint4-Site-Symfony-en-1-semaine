@@ -40,7 +40,6 @@
 											<th>Address</th>
 											<th>Date</th>
 											<th>Image</th>
-											<th>Pays</th>
 											<th class="d-flex justify-content-center">Actions</th>
 										</tr>
 									</thead>
@@ -51,8 +50,6 @@
 												<td>{{ recomendation.address }}</td>
 												<td>{{ recomendation.date ? recomendation.date|date('Y-m-d') : '' }}</td>
 												<td>{{ recomendation.image }}</td>
-												<td>{{ recomendation.country }}</td>
-
 												<td class="d-flex justify-content-end">
 													<a href="{{ path('app_admin_reco_edit', {'id': recomendation.id}) }}" class="btn btn-warning border-warning d-block mx-auto ">Modifier</a>
 													{{ include('admin_reco/_delete_form.html.twig') }}

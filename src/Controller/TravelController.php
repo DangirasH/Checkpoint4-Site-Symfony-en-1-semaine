@@ -20,4 +20,16 @@ class TravelController extends AbstractController
             'controller_name' => 'TravelController',
         ]);
     }
+
+    #[Route('/{id}', name: 'show')]
+    public function show(Travel $travel): Response
+    {
+        $recomendations = $travel->getRecomendations();
+
+        return $this->render('travel/show.html.twig', [
+            'travel' => $travel,
+            'recomendations' => $recomendations,
+            'controller_name' => 'TravelController',
+        ]);
+    }
 }

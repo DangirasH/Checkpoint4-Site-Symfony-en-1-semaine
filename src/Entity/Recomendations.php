@@ -26,11 +26,12 @@ class Recomendations
     #[ORM\Column(type: 'string', length: 255)]
     private string $image;
 
-    #[ORM\Column(type: 'string', length: 255)]
-    private string $country;
-
     #[ORM\Column(type: 'date')]
     private \DateTimeInterface $date;
+
+    #[ORM\ManyToOne(inversedBy: 'recomendations')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Travel $travel = null;
 
     public function getId(): ?int
     {
@@ -85,18 +86,6 @@ class Recomendations
         return $this;
     }
 
-    public function getCountry(): ?string
-    {
-        return $this->country;
-    }
-
-    public function setCountry(string $country): self
-    {
-        $this->country = $country;
-
-        return $this;
-    }
-
     public function getDate(): ?\DateTimeInterface
     {
         return $this->date;
@@ -105,6 +94,18 @@ class Recomendations
     public function setDate(\DateTimeInterface $date): self
     {
         $this->date = $date;
+
+        return $this;
+    }
+
+    public function getTravel(): ?Travel
+    {
+        return $this->travel;
+    }
+
+    public function setTravel(?Travel $travel): self
+    {
+        $this->travel = $travel;
 
         return $this;
     }

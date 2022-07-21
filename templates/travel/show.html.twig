@@ -1,31 +1,44 @@
-<div class="container-fluid">
-	<div class="navbar">
-		<div class="menu">
-			<h3 class="logo">
-				<a class="lorder" href="/"><img src="{{ asset('build/images/favicon.png') }}" class="rounded m-2" alt="DanTravels" width="50" height="44"></a>Dan<span>Travels</span>
-			</h3>
-			<div class="hamburger-menu">
-				<div class="bar"></div>
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<div class="container-fluid">
+		<div class="navbar">
+			<div class="menu">
+				<h3 class="logo">
+					<a class="lorder" href="/"><img src="{{ asset('build/images/favicon.png') }}" class="rounded m-2" alt="DanTravels" width="50" height="44"></a>Dan<span>Travels</span>
+				</h3>
+				<div class="hamburger-menu">
+					<div class="bar"></div>
+				</div>
 			</div>
 		</div>
-	</div>
 
-	<div class="main-container-fluid">
-		<div class="main">
-			<header>
-				<div class="overlay">
-					<div>
-						<h2 class="text-center text-primary mb-5">À propos de moi</h2>
+		<div class="main-container-fluid">
+			<div class="main">
+				<header>
+					<div class="overlay">
+						<div>
+							<h2 class="text-center text-primary mb-5">{{ travel.location}}</h2>
+							<ul>
+							{% for recomendation in recomendations %}
+							{# j'affcihe mes recommandation #}
+								<li>{{recomendation.activity}}</li>
+								{% else %}
+								<li>Aucune recommandation disponible</li>
+							{% endfor %}
+							</ul>
 
 
-						<div class="inner"></div>
+							<div class="inner"></div>
+						</div>
 					</div>
-				</div>
-			</header>
+				</header>
+			</div>
+			<div class="shadow one"></div>
+			<div class="shadow two"></div>
+			{% block header %}
+				{% include 'components/_navbar.html.twig' %}
+			{% endblock %}
 		</div>
-		<div class="shadow one"></div>
-		<div class="shadow two"></div>
-		{% block header %}
-			{% include 'components/_navbar.html.twig' %}
-		{% endblock %}
 	</div>
+{% endblock %}

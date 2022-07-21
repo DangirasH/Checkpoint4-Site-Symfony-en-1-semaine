@@ -22,17 +22,16 @@ class TravelFixtures extends Fixture
             'address' => 'Cork 92233',
             'date' => "12/02/2022",
             'image' => 'cork.jpg',
-            'country' => 'Ireland'
+            'country' => 'France'
         ],
         [
             'location' => 'Galway',
             'address' => 'Cork 92233',
             'date' => "12/02/2022",
             'image' => 'cork.jpg',
-            'country' => 'Ireland'
+            'country' => 'Lithuania'
         ],
     ];
-
 
     public function load(ObjectManager $manager): void
     {
@@ -44,7 +43,7 @@ class TravelFixtures extends Fixture
             $travel->setImage($travelItems['image']);
             $travel->setCountry($travelItems['country']);
             $manager->persist($travel);
-            $this->addReference('network_' . $travelItems['location'], $travel);
+            $this->addReference('travel_' . $travelItems['location'], $travel);
         }
 
         $manager->flush();

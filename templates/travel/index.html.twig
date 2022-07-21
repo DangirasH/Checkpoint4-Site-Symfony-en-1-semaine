@@ -9,7 +9,8 @@
 	<div class="container-fluid">
 		<div class="navbar">
 			<div class="menu">
-				<h3 class="logo"><a class="lorder" href="/"><img src="{{ asset('build/images/favicon.png') }}" class="rounded m-2" alt="DanTravels" width="50" height="44"></a>Dan<span>Travels</span>
+				<h3 class="logo">
+					<a class="lorder" href="/"><img src="{{ asset('build/images/favicon.png') }}" class="rounded m-2" alt="DanTravels" width="50" height="44"></a>Dan<span>Travels</span>
 				</h3>
 				<div class="hamburger-menu">
 					<div class="bar"></div>
@@ -19,7 +20,7 @@
 
 		<div class="main-container-fluid">
 			<div class="main">
-				<header>	
+				<header>
 					<div class="overlay">
 						<div>
 							<h2 class="text-center text-primary mb-5">
@@ -27,13 +28,12 @@
 							</h2>
 
 
-							
-								<div class="myCard d-flex flex-row">
-									{% for travel in travel %}
-										{% include 'components/_cardvoyage.html.twig' %}
-									{% endfor %}
-								</div>
-							
+							<div class="myCard d-flex flex-row">
+								{% for travel in travel %}
+									{% include 'components/_cardvoyage.html.twig' %}
+								{% endfor %}
+							</div>
+
 
 						</div>
 					</div>
@@ -45,4 +45,5 @@
 				{% include 'components/_navbar.html.twig' %}
 			{% endblock %}
 		</div>
-	{% endblock %}
+	</div>
+{% endblock %}

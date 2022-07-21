@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\TravelRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: TravelRepository::class)]
@@ -27,6 +29,14 @@ class Travel
 
     #[ORM\Column(type: 'string', length: 255)]
     private string $country;
+
+    #[ORM\OneToMany(mappedBy: 'travel', targetEntity: Recomendations::class, orphanRemoval: true)]
+    private Collection $recomendations;
+
+    public function __construct()
+    {
+        $this->recomendations = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -89,6 +99,36 @@ class Travel
     public function setCountry(string $country): self
     {
         $this->country = $country;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Recomendations>
+     */
+    public function getRecomendations(): Collection
+    {
+        return $this->recomendations;
+    }
+
+    public function addRecomendation(Recomendations $recomendation): self
+    {
+        if (!$this->recomendations->contains($recomendation)) {
+            $this->recomendations[] = $recomendation;
+            $recomendation->setTravel($this);
+        }
+
+        return $this;
+    }
+
+    public function removeRecomendation(Recomendations $recomendation): self
+    {
+        if ($this->recomendations->removeElement($recomendation)) {
+            // set the owning side to null (unless already changed)
+            if ($recomendation->getTravel() === $this) {
+                $recomendation->setTravel(null);
+            }
+        }
 
         return $this;
     }
