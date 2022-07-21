@@ -1,12 +1,16 @@
 {% extends 'base.html.twig' %}
-
-{% block title %}Hello ContactController!{% endblock %}
+{% block stylesheets %}
+	{{ encore_entry_link_tags('contact') }}
+{% endblock %}
+{% block title %}Hello ContactController!
+{% endblock %}
 
 {% block body %}
-<div class="container-fluid">
+	<div class="container-fluid">
 		<div class="navbar">
 			<div class="menu">
-				<h3 class="logo"><a class="lorder" href="/"><img src="{{ asset('build/images/favicon.png') }}" class="rounded m-2" alt="DanTravels" width="50" height="44"></a>Dan<span>Travels</span>
+				<h3 class="logo">
+					<a class="lorder" href="/"><img src="{{ asset('build/images/favicon.png') }}" class="rounded m-2" alt="DanTravels" width="50" height="44"></a>Dan<span>Travels</span>
 				</h3>
 				<div class="hamburger-menu">
 					<div class="bar"></div>
@@ -19,15 +23,15 @@
 				<header>
 					<div class="overlay">
 						<div>
-						
-							
 
-							<div class="inner">
-							<h2 class="title text-primary">Contacter Moi !</h2>
-									{% include 'contact/_contactForm.html.twig' %}
-
-
+							<div class="d-flex justify-content-center">
 								
+							</div>
+							<div class="contact mt-5">
+							<h2 class="title text-primary mb-5 d-flex justify-content-center">Contactez moi!</h2>
+							<div class="inner">
+								{% include 'contact/_contactForm.html.twig' %}
+							</div>
 							</div>
 						</div>
 					</div>
@@ -40,4 +44,4 @@
 			{% endblock %}
 		</div>
 
-{% endblock %}
+	{% endblock %}
