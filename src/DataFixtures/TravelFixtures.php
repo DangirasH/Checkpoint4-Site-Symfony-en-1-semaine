@@ -13,22 +13,22 @@ class TravelFixtures extends Fixture
         [
             'location' => 'Cork',
             'address' => 'Cork 92233',
-            'date' => "12/02/2022",
-            'image' => 'cork.jpg',
+            'date' => "10/02/2013",
+            'image' => 'ireFlag.png',
             'country' => 'Ireland'
         ],
         [
-            'location' => 'Dublin',
-            'address' => 'Cork 92233',
-            'date' => "12/02/2022",
-            'image' => 'cork.jpg',
+            'location' => 'Nantes',
+            'address' => '44000 Nantes',
+            'date' => "12/03/2021",
+            'image' => 'frFlag.png',
             'country' => 'France'
         ],
         [
-            'location' => 'Galway',
-            'address' => 'Cork 92233',
-            'date' => "12/02/2022",
-            'image' => 'cork.jpg',
+            'location' => 'Siaulai',
+            'address' => 'Šiauliai 76149',
+            'date' => "12/09/2008",
+            'image' => 'litFlag.png',
             'country' => 'Lithuania'
         ],
     ];

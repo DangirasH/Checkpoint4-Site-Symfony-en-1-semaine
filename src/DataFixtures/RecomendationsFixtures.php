@@ -12,25 +12,24 @@ class RecomendationsFixtures extends Fixture implements DependentFixtureInterfac
 {
     public const RECOMENDATIONS = [
         [
-            'activity' => 'Cork',
-            'address' => 'Cork 92233',
+            'activity' => 'Shandon Bells & Tower St Annes Church',
+            'address' => 'Church St, Shandon, Cork, Ireland',
             'date' => "12/02/2022",
-            'image' => 'cork.jpg',
-            'description' => 'Lorem abuda aikk Lorem abuda aikk Lorem abuda aikk'
+            'image' => 'church.png',
+            'description' => "Belle église avec des activités médiévales telles que des tests alimentaires sûrs, bien sûr, des tests d'armure et du théâtre"        ],
+        [
+            'activity' => 'The Lough',
+            'address' => 'Cork Lough, The Lough, Cork, Ireland',
+            'date' => "12/02/2022",
+            'image' => 'lake.png',
+            'description' => "Rien à dire de plus, beau lac pour un plongeon dans l'eau"
         ],
         [
-            'activity' => 'Dublin',
-            'address' => 'Cork 92233',
+            'activity' => 'Panda Asian Street Food',
+            'address' => '132 Evergreen Rd, Turners Cross',
             'date' => "12/02/2022",
-            'image' => 'cork.jpg',
-            'description' => 'Lorem abuda aikk Lorem abuda aikk Lorem abuda aikk'
-        ],
-        [
-            'activity' => 'Galway',
-            'address' => 'Cork 92233',
-            'date' => "12/02/2022",
-            'image' => 'cork.jpg',
-            'description' => 'Lorem abuda aikk Lorem abuda aikk Lorem abuda aikk'
+            'image' => 'panda.png',
+            'description' => 'Aimez-vous la cuisine chinoise alors voici le meilleur en Irlande'
 
         ],
     ];

@@ -7,7 +7,6 @@
 }
 .card-body
 {
-  
   background-color: #28313b;
   border:solid 0.5px;
   border-color: #28313b;
@@ -18,4 +17,9 @@
   text-align: center;
   color: #fff;
   padding: 0 2rem;
+}
+
+.card img
+{
+  max-height: 40%;
 }
