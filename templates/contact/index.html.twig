@@ -2,6 +2,10 @@
 {% block stylesheets %}
 	{{ encore_entry_link_tags('contact') }}
 {% endblock %}
+
+{% block javascripts %}
+	{{ encore_entry_script_tags('contactForm') }}
+{% endblock %}
 {% block title %}Hello ContactController!
 {% endblock %}
 
@@ -24,14 +28,12 @@
 					<div class="overlay">
 						<div>
 
-							<div class="d-flex justify-content-center">
-								
-							</div>
+							<div class="d-flex justify-content-center"></div>
 							<div class="contact border border-2 border-primary mt-5">
-							<h2 class="title text-primary mb-5 d-flex justify-content-center">Contactez moi!</h2>
-							<div class="inner">
-								{% include 'contact/_contactForm.html.twig' %}
-							</div>
+								<h2 class="title text-primary mb-5 d-flex justify-content-center">Contactez moi!</h2>
+								<div class="inner">
+									{% include 'contact/_contactForm.html.twig' %}
+								</div>
 							</div>
 						</div>
 					</div>

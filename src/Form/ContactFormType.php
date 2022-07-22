@@ -17,24 +17,35 @@ class ContactFormType extends AbstractType
     {
         $builder
             ->add('firstName', TextType::class, [
-                'label' => '<i class="bi bi-person my-2"></i> Prénom',
+                'label' => '<i class="bi bi-person my-2"></i>',
                 'label_html' => true,
+                'attr' =>
+                ['placeholder' => 'Prénom']
+
             ])
             ->add('lastName', TextType::class, [
-                'label' => '<i class="bi bi-person"></i> Nom',
+                'label' => '<i class="bi bi-person"></i>',
                 'label_html' => true,
+                'attr' =>
+                ['placeholder' => 'Nom']
             ])
             ->add('phone', TelType::class, [
-                'label' => '<i class="bi bi-telephone my-5"></i> Téléphone',
+                'label' => '<i class="bi bi-telephone my-5"></i>',
                 'label_html' => true,
+                'attr' =>
+                ['placeholder' => 'Téléphone']
             ])
             ->add('email', EmailType::class, [
-                'label' => '<i class="bi bi-envelope"></i> Email',
+                'label' => '<i class="bi bi-envelope"></i>',
                 'label_html' => true,
+                'attr' =>
+                ['placeholder' => 'Email']
             ])
             ->add('message', TextareaType::class, [
-                'label' => '<i class="bi bi-pen"></i> Message',
+                'label' => '<i class="bi bi-pen"></i>',
                 'label_html' => true,
+                'attr' =>
+                ['placeholder' => 'Message']
             ]);
     }
 

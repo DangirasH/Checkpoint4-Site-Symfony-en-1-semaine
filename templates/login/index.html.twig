@@ -1,8 +1,5 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello LoginController!
-{% endblock %}
-
 {% block body %}
 	<div class="container-fluid">
 		<div class="navbar">
@@ -21,16 +18,14 @@
 				<header>
 					<div class="overlay">
 						<div>
-							<h2 class="text-center text-primary mb-5">Connexion administrateur</h2>
+							<h2 class="text-center text-primary mb-5">Connexion</h2>
 
 
 							<div class="inner">
 								{% if error %}
-									<div class="text-center text-danger pt-5">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+									<div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
 								{% endif %}
-
-
-								<form action="{{ path('connection') }}" method="post" class="w-50 mx-auto mb-5">
+								<form action="{{ path('app_login') }}" method="post" class="w-75 mx-auto mb-5">
 									<label for="username" class="form-label">
 										<i class="bi bi-person-bounding-box"></i>
 										Nom d'utilisateur</label>
@@ -39,7 +34,7 @@
 										<i class="bi bi-key-fill"></i>
 										Mot de passe</label>
 									<input class="form-control mb-3" type="password" id="password" name="_password"/>
-									<input type="hidden" name="_target_path" value="/admin/home"/>
+									<input type="hidden" name="_target_path" value="admin_home"/>
 									<input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
 									<button type="submit" class="btn btn-primary my-2">
 										<i class="bi bi-arrow-right-square-fill"></i>
@@ -58,4 +53,6 @@
 				{% include 'components/_navbar.html.twig' %}
 			{% endblock %}
 		</div>
+
+
 	{% endblock %}

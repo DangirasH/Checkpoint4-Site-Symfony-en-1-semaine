@@ -28,7 +28,7 @@
 							</h2>
 							<div class="inners">
 								<div class="mb-5 d-flex flex-row">
-								<a href="/admin/home" class="btn btn-primary d-block mx-auto w-25">Retour à l'Acceuil</a>
+								<a href="/admin/home" class="btn btn-primary d-block mx-auto w-25"><i class="bi bi-arrow-left"></i>Retour à l'Acceuil</a>
 									<a href="{{ path('app_admin_travel_new') }}" class="btn btn-secondary border-secondary d-block mx-auto w-25">Créer un nouveau</a>
 								</div>
 								<table class="table">
@@ -51,7 +51,7 @@
 												<td>{{ travel.image }}</td>
 												<td>{{ travel.country }}</td>
 												<td class="d-flex justify-content-end">
-													<a href="{{ path('app_admin_travel_edit', {'id': travel.id}) }}" class="btn btn-warning border-warning d-block mx-auto ">Modifier</a>
+													<a href="{{ path('app_admin_travel_edit', {'id': travel.id}) }}" class="btn btn-warning border-warning d-block mx-auto ">Modifier<i class="bi bi-pen ms-2"></i></a>
 													{{ include('admin_travel/_delete_form.html.twig') }}
 												</td>
 											</tr>

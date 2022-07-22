@@ -4,6 +4,11 @@
 				<li><a href="/about" style="--i: 0.1s;"><span></span>A Propos de moi</a></li>
 				<li><a href="/travel" style="--i: 0.15s;"><span></span>Mes Voyages</a></li>
 				<li><a href="/contact" style="--i: 0.3s;"><span></span>Contact</a></li>
+				
 				<li><a href="/admin/home" style="--i: 0.25s;"><span></span>Mon Espace</a></li>
+				{% if app.user %}
+				<li><a href="/logout" style="--i: 0.25s;"><span></span>Déconnexion</a></li>
+				{% endif %}
+
 			</ul>
 		</div>
